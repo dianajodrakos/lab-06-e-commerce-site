@@ -2,7 +2,8 @@
 
 :root {
     --bar: 80px;
-    --pad: 20px;
+    --pad: 40px;
+    font-size: .8rem;
 }
 
 body {
@@ -31,8 +32,8 @@ header {
 main {
     width: 100%;
     height: calc(100vh - var(--bar));
+    padding: var(--pad);
     padding-top: calc(var(--bar) + var(--pad));
-    padding-bottom: var(--pad);
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
@@ -62,10 +63,4 @@ footer {
     background-color: #eee;
     border-top: .5px solid #ccc;
     border-bottom: .5px solid #ccc;
-}
-
-img {
-    margin: .5rem;
-    max-width: 100px;
-    max-height: 100px;
 }

@@ -1,5 +1,17 @@
-.item {
+li {
+    display: grid;
+    grid-template-columns: 200px 1fr 100px;
+    align-items: center;
+    justify-content: center;
 }
 
-.item-list {
+li div {
+    display: inline-block;
+    margin: .6rem;
+}
+
+li img {
+    max-width: 150px;
+    max-height: 150px;
+    float: right;
 }

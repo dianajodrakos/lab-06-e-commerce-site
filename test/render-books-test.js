@@ -1,0 +1,32 @@
+import { renderBooks } from '../products/render-books.js';
+
+const test = QUnit.test;
+
+QUnit.module('Render Books');
+
+test('renders a book list item', assert => {
+    // arrange
+    const book = {
+        id: 'good-work',
+        title: 'Good Work',
+        author: 'E. F. Schumacher',
+        image: 'good-work.jpeg',
+        description: 'A series of lectures on economics, intermediate technology, and human-centered industry.',
+        pages: 223,
+        year: 1979,
+        language: 'English',
+        publisher: 'HarperCollins Publishers',
+        ISBN: '0060905611',
+        category: 'theory',
+        price: 2.06,
+    };
+    
+    const expected = '<li class="theory"><div><img src="./assets/good-work.jpeg"></div><div><h3>Good Work</h3><h4>E. F. Schumacher</h4><p class="description">A series of lectures on economics, intermediate technology, and human-centered industry.</p><p class="metadata">223 pages | Originally Published in 1979</p><p class="metadata">HarperCollins Publishers | English | ISBN-10: 0060905611</p><p class="price">$2.06</p></div><div><button type="button" value="good-work">Add to Cart</button></div></li>';
+
+    // act
+    const dom = renderBooks(book);
+    const html = dom.outerHTML;
+    
+    // assert
+    assert.equal(html, expected);
+});

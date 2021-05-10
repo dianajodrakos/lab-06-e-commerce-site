@@ -1,9 +1,9 @@
 const book1 = {
-    id: goodWork,
+    id: 'good-work',
     title: 'Good Work',
     author: 'E. F. Schumacher',
     image: 'good-work.jpeg',
-    description: '',
+    description: 'A series of lectures on economics, intermediate technology, and human-centered industry.',
     pages: 223,
     year: 1979,
     language: 'English',
@@ -14,7 +14,7 @@ const book1 = {
     };
 
 const book2 = {
-    id: labyrinths,
+    id: 'labyrinths',
     title: 'Labyrinths',
     author: 'Jorge Luis Borges',
     image: 'labyrinths.jpg',
@@ -29,7 +29,7 @@ const book2 = {
     };
 
 const book3 = {
-    id: operating-spaceship-earth,
+    id: 'operating-spaceship-earth',
     title: 'Operating Manual for Spaceship Earth',
     author: 'R. Buckminster Fuller',
     image: 'operating-spaceship-earth.jpg',
@@ -44,7 +44,7 @@ const book3 = {
     };
 
 const book4 = {
-    id: the-disposessed,
+    id: 'the-disposessed',
     title: 'The Disposessed: An Ambiguous Utopia',
     author: 'Ursula K. LeGuin',
     image: 'the-disposessed.jpg',
@@ -59,7 +59,7 @@ const book4 = {
     };
 
 const book5 = {
-    id: simians-cyborgs-women,
+    id: 'simians-cyborgs-women',
     title: 'Simians, Cyborgs, and Women: The Reinvention of Nature',
     author: 'Donna Haraway',
     image: 'simians-cyborgs-women.jpg',
@@ -74,7 +74,7 @@ const book5 = {
     };
 
 const book6 = {
-    id: fermentation-as-metaphor,
+    id: 'fermentation-as-metaphor',
     title: 'Fermentation As Metaphor',
     author: 'Sandor Ellix Katz',
     image: 'fermentation-as-metaphor.jpg',
