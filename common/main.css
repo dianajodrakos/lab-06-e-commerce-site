@@ -2,7 +2,7 @@
 
 :root {
     --bar: 80px;
-    --pad: 10px;
+    --pad: 20px;
 }
 
 body {
@@ -35,7 +35,7 @@ main {
     padding-bottom: var(--pad);
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
