@@ -37,16 +37,16 @@ test('function passes array and id, returns array with matching id', (expect) =>
 
 });test('input quantity and price, return total', (expect) => {
 
-    // // arrange
-    // const myId1 = 1;
-    // const expected2 = labyrinths;
+    // arrange
+    const total = 5
+    const price = 2.7
+    const expected = 13.5
     
-
-    // // act
-    // const actual2 = findById(myArray, myId2);
-
-    // // assert
-    // expect.equal(actual2, expected2);
+    // act
+    const actual = calcItemTotal(total, price);
+    
+    // assert
+    expect.equal(actual, expected);
 
 });
 

@@ -3,21 +3,17 @@ export function renderBooks(book) {
     const li = document.createElement('li');
     li.className = book.category;
 
-
     // first div for product image
     const div1 = document.createElement('div');
     div1.className = 'image';
     //second div for item text data
     const div2 = document.createElement('div');
     div2.className = 'data';
-
     li.append(div1, div2);
-
 
     //product image nested in first div
     const img = document.createElement('img');
     img.src = `./assets/${book.image}`;
-
     div1 .append(img);
     
     //product text data nested in second div
