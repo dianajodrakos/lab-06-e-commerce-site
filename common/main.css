@@ -2,8 +2,15 @@
 
 :root {
     --bar: 80px;
-    --pad: 40px;
-    font-size: .8rem;
+    --pad: .2rem;
+    --gutter: 1rem;
+    --color1: blue;
+    --color2: orangered;
+    --bkg: white;
+    --radius: .2rem;
+    color: var(--color1);
+    background-color: var(--bkg);
+    font-size: 18px;
 }
 
 body {
@@ -12,6 +19,10 @@ body {
     font-family: 'DM Mono', monospace;
     display: grid;
     grid-template-rows: var(--bar), 1fr, var(--bar);
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-content: space-between;
+    font-size: .8rem;
 }
 
 header {
@@ -19,48 +30,50 @@ header {
     width: 100%;
     height: var(--bar);
     display: flex;
-    flex-direction: column;
-    justify-content:space-around;
+    justify-content:center;
     align-items: center;
-    text-align: center;
-    padding: 0rem 3rem;
-    background-color: #eee;
-    border-top: .5px solid #ccc;
-    border-bottom: .5px solid #ccc;
+    background-color: var(--bkg);
+    border-bottom: .15rem solid var(--color1);
+    font-size: 1.2rem;
 }
 
 main {
     width: 100%;
-    height: calc(100vh - var(--bar));
+    height: 100%;
     padding: var(--pad);
-    padding-top: calc(var(--bar) + var(--pad));
+    padding-top: calc(var(--bar) + var(--gutter));
     display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-section {
-    /* background-color: var(--color1); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-flow: column wrap;
     align-items: center;
-}
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
+    justify-content: flex-start;
 }
 
 footer {
     width: 100%;
     height: var(--bar);
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eee;
-    border-top: .5px solid #ccc;
-    border-bottom: .5px solid #ccc;
+    background-color: var(--bkg);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: var(--pad);
+}
+
+a:link {
+    color: var(--color1);
+    text-decoration: none;
+}
+
+a:hover, a:visited:hover {
+    color: var(--color2);
+    text-decoration: none;
+    text-shadow: calc(var(--pad) / 2) calc(var(--pad) / 2) rgba(255, 99, 71, .5);
+}
+a:visited {
+    color: var(--color1);
+    text-decoration: none;
 }

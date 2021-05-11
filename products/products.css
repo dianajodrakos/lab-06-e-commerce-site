@@ -1,17 +1,115 @@
 li {
     display: grid;
-    grid-template-columns: 200px 1fr 100px;
+    grid-template-columns:200px 1fr;
+    grid-template-rows: 1fr;
     align-items: center;
     justify-content: center;
+    padding: calc(2 * var(--gutter));
 }
 
-li div {
-    display: inline-block;
-    margin: .6rem;
-}
-
-li img {
+.image {
+    display: flex;
+    justify-content: flex-end;
+    max-height: 200px;
     max-width: 150px;
-    max-height: 150px;
-    float: right;
+    margin: var(--gutter);
+}
+
+.data {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: flex-end;
+    margin: var(--gutter);
+}
+
+.foodways {
+    --color4: rgba(127, 255, 212, .4);
+    border-color: var(--color4);
+}
+
+.theory {
+    --color4: rgba(0, 255, 255, .3);
+    border-color: var(--color4);
+}
+
+.fiction {
+    --color4: rgba(240, 230, 40, .4);
+    border-color: var(--color4);
+}
+
+img {
+    max-height: inherit;
+    max-width: inherit;
+    border: var(--pad) solid var(--bkg);
+    box-shadow: -1rem -1rem var(--color4);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+
+h3 {
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: calc(2 * var(--pad));
+    background-color: var(--color4);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+h4 {
+    font-size: 1.1rem;
+    padding: var(--pad);
+    border-left: var(--pad) solid var(--color4);
+    border-bottom: var(--pad) solid var(--color4);
+    padding-left: calc(2 * var(--pad));
+}
+
+p {
+    padding: var(--pad);
+}
+
+.description {
+    padding: var(--pad);
+    border-right: var(--pad) solid var(--color4);
+    border-bottom: var(--pad) solid var(--color4);
+}
+.metadata {
+    font-size: .55rem;
+    padding: var(--pad);
+    border-left: var(--pad) solid var(--color4);
+    border-bottom: var(--pad) solid var(--color4);
+}
+
+.price {
+    padding: var(--pad);
+    border-bottom: var(--pad) solid var(--color4);
+    border-right: var(--pad) solid var(--color4);
+}
+
+.button {
+    padding: var(--pad);
+    border-left: var(--pad) solid var(--color4);
+}
+
+button {
+    height: max-content;
+    width: max-content;
+    border: 1px solid var(--color1);
+    margin: var(--pad);
+    padding: .3rem .5rem;
+    border-radius: var(--radius);
+    font-family: inherit;
+    color: inherit;
+}
+
+button:hover {
+    background-color:lightgray;
+    border: 1px solid var(--color2);
+    padding: .3rem .5rem;
+    border-radius: var(--radius);
+    font-family: inherit;
+    color: var(--color2);
+    box-shadow: var(--pad) var(--pad) rgba(255, 99, 71, .5);
 }

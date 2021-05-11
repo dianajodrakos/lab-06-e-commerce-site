@@ -6,13 +6,12 @@ export function renderBooks(book) {
 
     // first div for product image
     const div1 = document.createElement('div');
+    div1.className = 'image';
     li.appendChild(div1);
     //second div for item text data
     const div2 = document.createElement('div');
+    div2.className = 'data';
     li.appendChild(div2);
-    //third div for button text data
-    const div3 = document.createElement('div');
-    li.appendChild(div3);
 
 
     //product image nested in first div
@@ -36,26 +35,23 @@ export function renderBooks(book) {
     div2.appendChild(p1);
     //metadata 1
     const p2 = document.createElement('p');
-    p2.textContent = `${book.pages} pages | Originally Published in ${book.year}`;
+    p2.textContent = `${book.pages} pages | Originally Published in ${book.year} | ${book.publisher} | ${book.language} | ISBN-10: ${book.ISBN}`;
     p2.classList = 'metadata';
     div2.appendChild(p2);
-    //metadata 2
-    const p3 = document.createElement('p');
-    p3.textContent = `${book.publisher} | ${book.language} | ISBN-10: ${book.ISBN}`
-    p3.classList = 'metadata';
-    div2.appendChild(p3);
     //price
     const p4 = document.createElement('p');
     p4.textContent = `$${book.price.toFixed(2)}`;
     p4.classList = 'price';
     div2.appendChild(p4);
-
-//button nested in third div
-const btn = document.createElement('button')
+    //button
+    const p5 = document.createElement('p');
+    p5.classList = 'button';
+    const btn = document.createElement('button')
     btn.type = 'button';
     btn.value = book.id;
     btn.textContent = 'Add to Cart';
-    div3.appendChild(btn);
+    p5.appendChild(btn);
+    div2.appendChild(p5);
 
     return li;
 }
