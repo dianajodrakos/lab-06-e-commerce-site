@@ -14,7 +14,6 @@ export function renderBooks(book) {
     li.append(div1, div2);
 
 
-
     //product image nested in first div
     const img = document.createElement('img');
     img.src = `./assets/${book.image}`;

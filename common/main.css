@@ -29,8 +29,9 @@ header {
     position: fixed;
     width: 100%;
     height: var(--bar);
+    padding: var(--gutter);
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
     background-color: var(--bkg);
     border-bottom: .15rem solid var(--color1);
@@ -78,4 +79,26 @@ a:hover, a:visited:hover {
 a:visited {
     color: var(--color1);
     text-decoration: none;
+}
+
+
+button {
+    height: max-content;
+    width: max-content;
+    border: 1px solid var(--color1);
+    margin: var(--pad);
+    padding: .3rem .5rem;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size:inherit;
+    color: inherit;
+}
+
+button:hover {
+    background-color:lightgray;
+    border: 1px solid var(--color2);
+    padding: .3rem .5rem;
+    border-radius: var(--radius);
+    color: var(--color2);
+    box-shadow: var(--pad) var(--pad) rgba(255, 99, 71, .5);
 }

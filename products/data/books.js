@@ -1,7 +1,7 @@
 const books 
 = [
     {
-        id: 'good-work',
+        id: 1,
         title: 'Good Work',
         author: 'E. F. Schumacher',
         image: 'good-work.jpeg',
@@ -16,7 +16,7 @@ const books
     },
 
     {
-        id: 'labyrinths',
+        id: 2,
         title: 'Labyrinths',
         author: 'Jorge Luis Borges',
         image: 'labyrinths.jpg',
@@ -31,7 +31,7 @@ const books
     },
 
     {
-        id: 'fermentation-as-metaphor',
+        id: 3,
         title: 'Fermentation As Metaphor',
         author: 'Sandor Ellix Katz',
         image: 'fermentation-as-metaphor.jpg',
@@ -46,7 +46,7 @@ const books
     },
 
     {
-        id: 'the-disposessed',
+        id: 4,
         title: 'The Disposessed: An Ambiguous Utopia',
         author: 'Ursula K. LeGuin',
         image: 'the-disposessed.jpg',
@@ -61,7 +61,7 @@ const books
     },
 
     {
-        id: 'simians-cyborgs-women',
+        id: 5,
         title: 'Simians, Cyborgs, and Women: The Reinvention of Nature',
         author: 'Donna Haraway',
         image: 'simians-cyborgs-women.jpg',
@@ -76,7 +76,7 @@ const books
     },
 
     {
-        id: 'operating-spaceship-earth',
+        id: 6,
         title: 'Operating Manual for Spaceship Earth',
         author: 'R. Buckminster Fuller',
         image: 'operating-spaceship-earth.jpg',

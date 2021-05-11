@@ -1,0 +1,17 @@
+table {
+    font-size: .8333rem;
+    padding: var(--gutter);
+}
+
+tr {
+    background-color: rgba( 0, 0, 255, .05);
+}
+
+thead, tfoot {
+    background-color: var(--bkg);
+    font-weight: bold;
+}
+
+td {
+    padding: var(--gutter);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width", initial-scale=1.0>
+    <title>The Book Peoples' Used Book Store</title>
+    <link rel=stylesheet href=./common/reset.css>
+    <link rel=stylesheet href=./common/main.css>
+    <link rel=stylesheet href=./styles/cart.css>
+</head>
+<body>
+    <header>
+        <span>
+            <a href="./index.html">The Book Peoples' Used Book Store</a>
+        </span>
+        <span class="nav"><a href="./products/index.html">Store</a>
+             • 
+            <a href="./cart.html">Cart</a>
+        </span>
+    </header>
+
+    <main>
+        <h2>Cart</h2>
+        <table>
+            <thead>
+                <td>Product Name</td>
+                <td>Unit Price</td>
+                <td>Quantity</td>
+                <td>Item Total</td>
+            </thead>
+            <!-- insert cart contents here!-->
+            <tr>
+                <td>Good Work</td>
+                <td>$2.06</td>
+                <td>1</td>
+                <td>$2.06</td>
+            </tr>
+            <tr>
+                <td>Fermentation As Metaphor</td>
+                <td>$25.00</td>
+                <td>1</td>
+                <td>$25.00</td>
+            </tr>
+            <tr>
+                <td>Operating Manual for Spaceship Earth</td>
+                <td>$6.00</td>
+                <td>2</td>
+                <td>$12.00</td>
+            </tr>
+            <!-- insert cart contents here!-->
+            <tfoot>
+                <td>TOTAL</td>
+                <td></td>
+                <td>4</td>
+                <td>$39.06</td>
+            </tfoot>
+        </table>
+
+        <button type="button" class="order">Place Order</button>
+    </main>
+
+    <footer>
+        Go buy stuff or whatever
+    </footer>
+    <script type=module src=./app.js></script>
+</body>
+</html>
