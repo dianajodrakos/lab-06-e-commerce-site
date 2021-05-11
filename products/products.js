@@ -3,8 +3,7 @@ import { renderBooks } from './render-books.js';
 
 const list = document.querySelector('#item-list');
 
-for(let i = 0; i < books.length; i++) {
-    const book = books[i];
+for(let book of books) {
     const listing = renderBooks(book);
-    list.appendChild(listing);
+    list.append(listing);
 }

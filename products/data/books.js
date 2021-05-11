@@ -1,35 +1,36 @@
-const book1 = {
-    id: 'good-work',
-    title: 'Good Work',
-    author: 'E. F. Schumacher',
-    image: 'good-work.jpeg',
-    description: 'A series of lectures on economics, intermediate technology, and human-centered industry.',
-    pages: 223,
-    year: 1979,
-    language: 'English',
-    publisher: 'HarperCollins Publishers',
-    ISBN: '0060905611',
-    category: 'theory',
-    price: 2.06,
-    };
+const books 
+= [
+    {
+        id: 'good-work',
+        title: 'Good Work',
+        author: 'E. F. Schumacher',
+        image: 'good-work.jpeg',
+        description: 'A series of lectures on economics, intermediate technology, and human-centered industry.',
+        pages: 223,
+        year: 1979,
+        language: 'English',
+        publisher: 'HarperCollins Publishers',
+        ISBN: '0060905611',
+        category: 'theory',
+        price: 2.06,
+    },
 
-const book2 = {
-    id: 'labyrinths',
-    title: 'Labyrinths',
-    author: 'Jorge Luis Borges',
-    image: 'labyrinths.jpg',
-    description: '',
-    pages: 240,
-    year: 1962,
-    language: 'English',
-    publisher: 'New Directions',
-    ISBN: '0811216993',
-    category: 'fiction',
-    price: 2.26,
-    };
+    {
+        id: 'labyrinths',
+        title: 'Labyrinths',
+        author: 'Jorge Luis Borges',
+        image: 'labyrinths.jpg',
+        description: '',
+        pages: 240,
+        year: 1962,
+        language: 'English',
+        publisher: 'New Directions',
+        ISBN: '0811216993',
+        category: 'fiction',
+        price: 2.26,
+    },
 
-    
-    const book3 = {
+    {
         id: 'fermentation-as-metaphor',
         title: 'Fermentation As Metaphor',
         author: 'Sandor Ellix Katz',
@@ -42,9 +43,9 @@ const book2 = {
         ISBN: '1645020215',
         category: 'foodways',
         price: 25,
-    };
-    
-    const book4 = {
+    },
+
+    {
         id: 'the-disposessed',
         title: 'The Disposessed: An Ambiguous Utopia',
         author: 'Ursula K. LeGuin',
@@ -57,9 +58,9 @@ const book2 = {
         ISBN: '006051275X',
         category: 'fiction',
         price: 5.49,
-    };
-    
-    const book5 = {
+    },
+
+    {
         id: 'simians-cyborgs-women',
         title: 'Simians, Cyborgs, and Women: The Reinvention of Nature',
         author: 'Donna Haraway',
@@ -72,9 +73,9 @@ const book2 = {
         ISBN: '0415903874',
         category: 'theory',
         price: 32.75,
-    };
-    
-    const book6 = {
+    },
+
+    {
         id: 'operating-spaceship-earth',
         title: 'Operating Manual for Spaceship Earth',
         author: 'R. Buckminster Fuller',
@@ -87,15 +88,7 @@ const book2 = {
         ISBN: '0935754016',
         category: 'theory',
         price: 6,
-    };
-
-const books = [
-    book1,
-    book2,
-    book3,
-    book4,
-    book5,
-    book6
+    }
 ];
 
 export default books;
