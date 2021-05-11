@@ -1,17 +1,15 @@
 li {
     display: grid;
-    grid-template-columns:200px 1fr;
+    grid-template-columns: minmax(150px, 300px) minmax(150px, 1000px);
     grid-template-rows: 1fr;
     align-items: center;
     justify-content: center;
-    padding: calc(2 * var(--gutter));
+    padding: calc(3 * var(--gutter));
 }
 
 .image {
     display: flex;
     justify-content: flex-end;
-    max-height: 200px;
-    max-width: 150px;
     margin: var(--gutter);
 }
 
@@ -19,7 +17,6 @@ li {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
     justify-content: flex-end;
     margin: var(--gutter);
 }
@@ -40,8 +37,10 @@ li {
 }
 
 img {
-    max-height: inherit;
-    max-width: inherit;
+    max-height: 300px;
+    max-width: 300px;
+    height: auto;
+    width: auto;
     border: var(--pad) solid var(--bkg);
     box-shadow: -1rem -1rem var(--color4);
     border-top-left-radius: var(--radius);
@@ -52,7 +51,7 @@ img {
 
 h3 {
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: calc(2 * var(--pad));
     background-color: var(--color4);
     border-top-left-radius: var(--radius);
@@ -60,7 +59,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: var(--pad);
     border-left: var(--pad) solid var(--color4);
     padding-left: calc(2 * var(--pad));
@@ -72,26 +71,28 @@ p {
 }
 
 .description {
-    font-size: .8em;
+    font-size: .694rem;
     border-top: var(--pad) solid var(--color4);
     border-right: var(--pad) solid var(--color4);
     border-top-right-radius: var(--radius);
 }
 
 .metadata {
-    font-size: .7rem;
+    font-size: .578rem;
     border-top: var(--pad) solid var(--color4);
     border-left: var(--pad) solid var(--color4);
     border-top-left-radius: var(--radius);
 }
 
 .price {
+    font-size: .833rem;
     border-top: var(--pad) solid var(--color4);
     border-right: var(--pad) solid var(--color4);
     border-top-right-radius: var(--radius);
 }
 
 .button {
+    font-size: .694rem;
     border-top: var(--pad) solid var(--color4);
     border-left: var(--pad) solid var(--color4);
     border-top-left-radius: var(--radius);
