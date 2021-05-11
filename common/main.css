@@ -10,7 +10,7 @@
     --radius: .2rem;
     color: var(--color1);
     background-color: var(--bkg);
-    font-size: 18px;
+    font-size: 24px;
 }
 
 body {
@@ -22,7 +22,6 @@ body {
     grid-template-columns: 1fr;
     justify-content: space-between;
     align-content: space-between;
-    font-size: .8rem;
 }
 
 header {
