@@ -2,70 +2,103 @@
 
 :root {
     --bar: 80px;
-    --pad: 20px;
+    --pad: .2rem;
+    --gutter: .833rem;
+    --color1: blue;
+    --color2: orangered;
+    --bkg: white;
+    --radius: .2rem;
+    color: var(--color1);
+    background-color: var(--bkg);
+    --txt: 20px;
+    font-size: var(--txt);
 }
 
 body {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     font-family: 'DM Mono', monospace;
     display: grid;
     grid-template-rows: var(--bar), 1fr, var(--bar);
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 header {
     position: fixed;
     width: 100%;
     height: var(--bar);
+    padding: var(--gutter);
     display: flex;
-    flex-direction: column;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
-    text-align: center;
-    padding: 0rem 3rem;
-    background-color: #eee;
-    border-top: .5px solid #ccc;
-    border-bottom: .5px solid #ccc;
+    background-color: var(--bkg);
+    border-bottom: .15rem solid var(--color1);
+    font-size: 1rem;
 }
 
 main {
     width: 100%;
-    height: calc(100vh - var(--bar));
-    padding-top: calc(var(--bar) + var(--pad));
-    padding-bottom: var(--pad);
+    height: 100%;
+    padding: var(--pad);
+    padding-top: calc(var(--bar) + var(--gutter));
+    padding-bottom: var(--gutter);
     display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-section {
-    /* background-color: var(--color1); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-flow: column wrap;
     align-items: center;
-}
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
+    justify-content: flex-start;
 }
 
 footer {
     width: 100%;
     height: var(--bar);
-    bottom: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: #eee;
-    border-top: .5px solid #ccc;
-    border-bottom: .5px solid #ccc;
+    background-color: var(--bkg);
+    font-size: .833rem;
 }
 
-img {
-    margin: .5rem;
-    max-width: 100px;
-    max-height: 100px;
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: var(--pad);
+}
+
+a:link {
+    color: var(--color1);
+    text-decoration: none;
+}
+
+a:hover, a:visited:hover {
+    color: var(--color2);
+    text-decoration: none;
+    text-shadow: calc(var(--pad) / 2) calc(var(--pad) / 2) rgba(255, 99, 71, .5);
+}
+a:visited {
+    color: var(--color1);
+    text-decoration: none;
+}
+
+
+button {
+    height: max-content;
+    width: max-content;
+    border: 1px solid var(--color1);
+    margin: var(--pad);
+    padding: .3rem .5rem;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size:inherit;
+    color: inherit;
+}
+
+button:hover {
+    background-color:lightgray;
+    border: 1px solid var(--color2);
+    padding: .3rem .5rem;
+    border-radius: var(--radius);
+    color: var(--color2);
+    box-shadow: var(--pad) var(--pad) rgba(255, 99, 71, .5);
 }

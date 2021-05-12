@@ -1,0 +1,28 @@
+table {
+    font-size: .8333rem;
+    padding: var(--gutter);
+}
+
+
+
+tbody {
+    background-color: rgba( 0, 0, 255, .02);
+}
+
+tfoot {
+    background-color: rgba( 0, 0, 255, .05);
+    font-weight: bold;
+}
+
+td {
+    padding: var(--gutter);
+    text-align: end;
+}
+
+td.name {
+    text-align: start;
+}
+
+button {
+    font-size: .833rem;
+}
