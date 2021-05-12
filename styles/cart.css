@@ -3,15 +3,26 @@ table {
     padding: var(--gutter);
 }
 
-tr {
-    background-color: rgba( 0, 0, 255, .05);
+
+
+tbody {
+    background-color: rgba( 0, 0, 255, .02);
 }
 
-thead, tfoot {
-    background-color: var(--bkg);
+tfoot {
+    background-color: rgba( 0, 0, 255, .05);
     font-weight: bold;
 }
 
 td {
     padding: var(--gutter);
+    text-align: end;
+}
+
+td.name {
+    text-align: start;
+}
+
+button {
+    font-size: .833rem;
 }

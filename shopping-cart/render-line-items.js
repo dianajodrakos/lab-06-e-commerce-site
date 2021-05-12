@@ -7,6 +7,7 @@ export function renderLineItems(cartItem) {
 
     const td1 = document.createElement('td');
     td1.textContent = lineItem.title;
+    td1.className = 'name';
 
     const td2 = document.createElement('td');
     td2.textContent = `$${lineItem.price.toFixed(2)}`;
