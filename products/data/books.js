@@ -1,4 +1,4 @@
-const books 
+export const books 
 = [
     {
         id: 1,
@@ -90,5 +90,3 @@ const books
         price: 6,
     }
 ];
-
-export default books;

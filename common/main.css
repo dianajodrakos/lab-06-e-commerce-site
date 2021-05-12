@@ -10,7 +10,7 @@
     --radius: .2rem;
     color: var(--color1);
     background-color: var(--bkg);
-    --txt: 24px;
+    --txt: 20px;
     font-size: var(--txt);
 }
 

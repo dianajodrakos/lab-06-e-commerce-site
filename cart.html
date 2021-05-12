@@ -29,31 +29,14 @@
                 <td>Quantity</td>
                 <td>Item Total</td>
             </thead>
-            <!-- insert cart contents here!-->
-            <tr>
-                <td>Good Work</td>
-                <td>$2.06</td>
-                <td>1</td>
-                <td>$2.06</td>
-            </tr>
-            <tr>
-                <td>Fermentation As Metaphor</td>
-                <td>$25.00</td>
-                <td>1</td>
-                <td>$25.00</td>
-            </tr>
-            <tr>
-                <td>Operating Manual for Spaceship Earth</td>
-                <td>$6.00</td>
-                <td>2</td>
-                <td>$12.00</td>
-            </tr>
-            <!-- insert cart contents here!-->
+            <tbody id ="cart">
+            <!-- cart items go here-->
+            </tbody>
             <tfoot>
                 <td>TOTAL</td>
                 <td></td>
-                <td>4</td>
-                <td>$39.06</td>
+                <td></td>
+                <td id="total"></td>
             </tfoot>
         </table>
 
@@ -63,6 +46,6 @@
     <footer>
         Go buy stuff or whatever
     </footer>
-    <script type=module src=./app.js></script>
+    <script type=module src='./shopping-cart/shopping-cart.js'></script>
 </body>
 </html>

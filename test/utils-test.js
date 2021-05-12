@@ -1,4 +1,6 @@
-import { findById, calcItemTotal } from '../utils.js';
+import { findById, calcItemTotal, calcOrderTotal } from '../utils.js';
+import { cartArray } from '../data/cart.js';
+import { books } from '../products/data/books.js';
 
 const test = QUnit.test;
 
@@ -35,7 +37,9 @@ test('function passes array and id, returns array with matching id', (expect) =>
     expect.equal(actual1, expected1);
     expect.equal(actual2, expected2);
 
-});test('input quantity and price, return total', (expect) => {
+});
+
+test('input quantity and price, return total', (expect) => {
 
     // arrange
     const total = 5
@@ -44,6 +48,19 @@ test('function passes array and id, returns array with matching id', (expect) =>
     
     // act
     const actual = calcItemTotal(total, price);
+    
+    // assert
+    expect.equal(actual, expected);
+
+});
+
+test('input product array and cart array, return total', (expect) => {
+
+    // arrange
+    const expected = 39.06
+    
+    // act
+    const actual = calcOrderTotal(cartArray, books);
     
     // assert
     expect.equal(actual, expected);
