@@ -2,28 +2,31 @@
 <html lang=en>
 <head>
     <meta charset=UTF-8>
-    <meta http-equiv=X-UA-Compatible content=IE=edge>
-    <meta name=viewport content=width=device-width, initial-scale=1.0>
-    <title>Document</title>
-    <link rel=stylesheet href=../reset.css>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content='width=device-width', initial-scale=1.0>
+    <title>The Book Peoples' Used Book Store</title>
+    <link rel=stylesheet href=../common/reset.css>
     <link rel=stylesheet href=../common/main.css>
-    <link rel=stylesheet href=./products.css>
+    <link rel=stylesheet href=../styles/products.css>
 </head>
 <body>
-    <header>Buy stuff</header>
+    
+    <header>
+        <span>
+            <a href="../index.html">The Book Peoples' Used Book Store</a>
+        </span>
+        <span class="nav">
+            <a href="../products/index.html">Store</a>
+             • 
+            <a href="../cart.html">Cart</a>
+            </span>
+        </header>
     <main>
-        <ul class="item-list">
-            <li class="item-category">
-                <img src="" />
-            <h3>*title*</h3>
-            <h4>*author*</h4>
-            <p>*description*</p>
-            <p>*price*</p>
-            <button type="button">Add *ID*</button>
-            </li>
+        <h2>Products</h2>
+        <ul id="item-list">
         </ul>
     </main>
-    <footer>Give us your money</footer>
+    <footer>Read more books.</footer>
     <script type=module src=./products.js></script>
 </body>
 </html>

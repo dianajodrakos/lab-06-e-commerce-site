@@ -1,0 +1,45 @@
+table {
+    font-size: .8333rem;
+    padding: var(--gutter);
+}
+
+thead td {
+    border-bottom: calc(var(--pad) / 2) solid var(--color1);
+}
+
+tbody {
+    background-color: rgba( 0, 0, 255, .02);
+}
+
+tfoot {
+    background-color: rgba( 0, 0, 255, .05);
+    font-weight: bold;
+}
+
+td {
+    padding: var(--gutter);
+    text-align: end;
+}
+
+td.name {
+    text-align: start;;
+}
+
+.foodways {
+    --color4: rgba(127, 255, 212, .02);
+    background: var(--color4);
+}
+
+.theory {
+    --color4: rgba(0, 255, 255, .02);
+    background: var(--color4);
+}
+
+.fiction {
+    --color4: rgba(240, 230, 40, .02);
+    background: var(--color4);
+}
+
+button {
+    font-size: .833rem;
+}
