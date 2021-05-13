@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 
 :root {
     --bar: 80px;
@@ -11,13 +13,16 @@
     color: var(--color1);
     background-color: var(--bkg);
     --txt: 20px;
+    --mono: 'DM Mono', monospace;
+    --serif: 'Bitter', serif;
     font-size: var(--txt);
+    font-family: var(--serif);
+    letter-spacing: .025rem;
 }
 
 body {
     height: 100vh;
     width: 100%;
-    font-family: 'DM Mono', monospace;
     display: grid;
     grid-template-rows: var(--bar), 1fr, var(--bar);
     grid-template-columns: 1fr;
@@ -62,7 +67,6 @@ footer {
 
 h2 {
     font-size: 1.2rem;
-    font-weight: bold;
     padding: var(--pad);
 }
 
@@ -76,11 +80,15 @@ a:hover, a:visited:hover {
     text-decoration: none;
     text-shadow: calc(var(--pad) / 2) calc(var(--pad) / 2) rgba(255, 99, 71, .5);
 }
+
+a:active {
+    text-shadow: none;
+}
+
 a:visited {
     color: var(--color1);
     text-decoration: none;
 }
-
 
 button {
     height: max-content;
@@ -89,8 +97,9 @@ button {
     margin: var(--pad);
     padding: .3rem .5rem;
     border-radius: var(--radius);
-    font-family: inherit;
-    font-size:inherit;
+    text-transform: uppercase;
+    font-family: var(--mono);
+    font-size: inherit;
     color: inherit;
 }
 
@@ -101,4 +110,30 @@ button:hover {
     border-radius: var(--radius);
     color: var(--color2);
     box-shadow: var(--pad) var(--pad) rgba(255, 99, 71, .5);
+}
+
+button:active {
+    background-color:lightgray;
+    border: 1px solid var(--color2);
+    padding: .3rem .5rem;
+    border-radius: var(--radius);
+    color: var(--color2);
+    box-shadow: none;
+    transform: translate(calc(var(--pad) / 2), calc(var(--pad) / 2));
+}
+
+button:disabled {
+    display: none;
+}
+
+.foodways {
+    --color4: rgba(127, 255, 212, .4);
+}
+
+.theory {
+    --color4: rgba(0, 255, 255, .3);
+}
+
+.fiction {
+    --color4: rgba(240, 230, 40, .4);
 }

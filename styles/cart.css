@@ -3,7 +3,9 @@ table {
     padding: var(--gutter);
 }
 
-
+thead td {
+    border-bottom: calc(var(--pad) / 2) solid var(--color1);
+}
 
 tbody {
     background-color: rgba( 0, 0, 255, .02);
@@ -20,7 +22,22 @@ td {
 }
 
 td.name {
-    text-align: start;
+    text-align: start;;
+}
+
+.foodways {
+    --color4: rgba(127, 255, 212, .02);
+    background: var(--color4);
+}
+
+.theory {
+    --color4: rgba(0, 255, 255, .02);
+    background: var(--color4);
+}
+
+.fiction {
+    --color4: rgba(240, 230, 40, .02);
+    background: var(--color4);
 }
 
 button {

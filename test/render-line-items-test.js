@@ -10,7 +10,7 @@ test('renders a line item in the cart', (expect) => {
             quantity: 2
         }
 
-    const expected = '<tr><td>Operating Manual for Spaceship Earth</td><td>$6.00</td><td>2</td><td>$12.00</td></tr>';
+    const expected = '<tr><td class="name">Operating Manual for Spaceship Earth</td><td>$6.00</td><td>2</td><td>$12.00</td></tr>';
     // act
     const dom = renderLineItems(cartItem);
     const actual = dom.outerHTML;

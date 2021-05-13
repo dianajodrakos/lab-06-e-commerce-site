@@ -1,3 +1,6 @@
+import { addItemToCart } from '../cart-api.js';
+import { calcItemTotal } from '../utils.js';
+
 export function renderBooks(book) {
     //make list element
     const li = document.createElement('li');
@@ -33,15 +36,87 @@ export function renderBooks(book) {
     p2.classList = 'metadata';
     //price
     const p3 = document.createElement('p');
-    p3.textContent = `$${book.price.toFixed(2)}`;
+    p3.textContent = '$0.00';
     p3.classList = 'price';
-    //button
+
+    
+    //add button
     const p4 = document.createElement('p');
     p4.classList = 'button';
     const btn = document.createElement('button')
     btn.type = 'button';
-    btn.value = book.id;
     btn.textContent = 'Add to Cart';
+    btn.classList = 'add-to-cart';
+
+    //quantity input 
+    const input = document.createElement('input');
+    input.id = book.id;
+    input.value = 0;
+    let qty = input.value;
+    input.type = 'number';
+    input.min = 0;
+    input.max = 10;
+    input.setAttribute('readonly', true);
+    
+        
+    //increment button
+    const upQty = document.createElement('button');
+    upQty.type = 'button';
+    upQty.textContent = '+';
+    upQty.classList.add('qty', 'up');
+    
+    //decrement button
+    const downQty = document.createElement('button');
+    downQty.type = 'button';
+    downQty.textContent = '-';
+    downQty.classList.add('qty', 'down');
+    
+    p4.append(downQty, input, upQty);
+
+
+
+    //increase qty button event listener
+    upQty.addEventListener ('click', () => {
+        if (qty > 9) {
+            return qty;
+        } else {
+            qty++;
+            const quantityTotal = calcItemTotal(book.price, qty);
+            p3.textContent = `$${quantityTotal.toFixed(2)}`;
+            input.value = qty;
+        }
+    });
+    
+
+
+    
+    //decrease qty button event listener
+    downQty.addEventListener ('click', () => {
+        if (qty < 1) {
+            return qty;
+        } else {
+            qty--;
+            const quantityTotal = calcItemTotal(book.price, qty);
+            p3.textContent = `$${quantityTotal.toFixed(2)}`;
+            input.value = qty;
+        }
+    });
+
+
+
+    //add button event listener
+    btn.addEventListener ('click', () => {
+        if (qty < 1) {
+            return;
+        } else {
+        addItemToCart(book.id, qty);
+        qty = 0;
+        const quantityTotal = calcItemTotal(book.price, qty);
+        p3.textContent = `$${quantityTotal.toFixed(2)}`;
+        input.value = qty;
+        }
+    }
+    );
 
     p4.append(btn);
     div2.append(h3, h4, p1, p2, p3, p4);

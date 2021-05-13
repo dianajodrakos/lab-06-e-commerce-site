@@ -1,6 +1,3 @@
-import { books } from './products/data/books.js';
-import { cartArray } from './data/cart.js';
-
 export function findById(array, id) {
     for(let item of array) {
         if (id === item.id) {
